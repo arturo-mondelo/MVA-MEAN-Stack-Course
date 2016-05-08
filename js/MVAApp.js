@@ -1,5 +1,5 @@
 var app = angular.module('MVAApp', []);
-
+//controlador
 app.controller('principalControlador', function($scope) {
 	$scope.posts = [];
 	$scope.newPost = {creado_por: '', texto: '', time_stamp: ''};
