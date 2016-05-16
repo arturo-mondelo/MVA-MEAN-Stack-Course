@@ -1,0 +1,22 @@
+<!registro.html>
+
+<html>
+  <head>
+    <title>MVAApp</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.0/angular.min.js"></script>
+    <script src="js/MVAApp.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="estilos/estilo.css">
+  </head>
+  <body ng-app="MVAApp">
+    <div id='main' class="container" ng-controller="autenticacionControlador">
+      <form class="form-auth" ng-submit="registrar()">
+        <h2>Registro</h2>
+        <p class="text-warning">{{mensaje_error}}</p>
+        <input type="username" ng-model="usuario.nombreusuario" placeholder="Nombre de Usuario" class="form-control"><br>
+        <input type="password" ng-model="usuario.contrasinal" placeholder="Contraseña" class="form-control"><br>
+        <input type="submit" value="Registrarse" class="btn btn-primary" />
+      </form>
+    </div>
+  </body>
+</html>
