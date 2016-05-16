@@ -1,5 +1,27 @@
-var app = angular.module('MVAApp', []);
-//controlador
+var app = angular.module('MVAApp', ['ngRoute']);
+
+app.config(function($routeProvider){
+	$routeProvider
+	//Display vista principal
+	.when('/', {
+		templateUrl: 'main.html',
+		controller: 'principalControlador'
+	})
+	
+	//Login Display
+	.when('/login', {
+		templateUrl: 'login.html',
+		controller: 'autenticacionControlador'
+	})
+	
+	//Display registro
+	.when('/registro', {
+		templateUrl: 'registro.html',
+		controller: 'autenticacionControlador'
+	});
+});
+
+//controlador prinipal
 app.controller('principalControlador', function($scope) {
 	$scope.posts = [];
 	$scope.newPost = {creado_por: '', texto: '', time_stamp: ''};
@@ -12,6 +34,7 @@ app.controller('principalControlador', function($scope) {
 	
 });
 
+//controlador de autenticacion y registro
 app.controller('autenticacionControlador', function($scope) {
 	$scope.usuario = {nombreusuario: '', contrasinal: ''};
 	
