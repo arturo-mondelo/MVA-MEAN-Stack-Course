@@ -11,3 +11,22 @@ app.controller('principalControlador', function($scope) {
 	};
 	
 });
+
+app.controller('autenticacionControlador', function($scope) {
+	$scope.usuario = {nombreusuario: '', contrasinal: ''};
+	
+	postService.getAll().success(function(data) {
+		$scope.posts = data;
+	});
+	
+	$scope.login = function() {
+		//vacio hasta implementacion de la autenticacion
+		$scope.mensaje_error = 'Peticion de login para ' + $scope.nombreusuario;
+		
+	};
+	
+	$scope.registrar = function() {
+		//vacio hasta implementacion de la autenticacion
+		$scope.mensaje_error = 'Registro solicitado para ' + $scope.nombreusuario;
+	};
+});
