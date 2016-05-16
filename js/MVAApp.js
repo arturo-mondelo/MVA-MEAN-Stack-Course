@@ -37,18 +37,19 @@ app.controller('principalControlador', function($scope) {
 //controlador de autenticacion y registro
 app.controller('autenticacionControlador', function($scope) {
 	$scope.usuario = {nombreusuario: '', contrasinal: ''};
+	$scope.mensaje_error = '';
 	
-	postService.getAll().success(function(data) {
+	postService.getAll().success(function(data){
 		$scope.posts = data;
 	});
 	
-	$scope.login = function() {
+	$scope.login = function(){
 		//vacio hasta implementacion de la autenticacion
 		$scope.mensaje_error = 'Peticion de login para ' + $scope.nombreusuario;
 		
 	};
 	
-	$scope.registrar = function() {
+	$scope.registrar = function(){
 		//vacio hasta implementacion de la autenticacion
 		$scope.mensaje_error = 'Registro solicitado para ' + $scope.nombreusuario;
 	};
