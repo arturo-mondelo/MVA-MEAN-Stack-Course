@@ -1,0 +1,26 @@
+<!--index.html-->
+<html>
+  <head>
+    <title>MVAApp</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.0/angular.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.0/angular-route.min.js"></script>
+    <script src="js/MVAApp.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="estilos/estilo.css">
+  </head>
+   <body ng-app="MVAApp">
+    <div id='main' class="container">
+      <nav class="navbar-fluid navbar-default navbar-fixed-top">
+        <div class="container">
+          <a class="navbar-brand" href="#"> Postealo! </a>
+          <p class="navbar-text"> Aprendiendo MEAN stack con esta pequeña app...</p>
+          <p class="navbar-right navbar-text"><a href="#/login">Accede</a> o <a href="#/registro">Registrate</a></p>
+        </div>
+      </nav>
+      <div class="col-md-offset-2 col-md-8">
+        <div ng-view>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

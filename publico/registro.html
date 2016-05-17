@@ -1,0 +1,9 @@
+<!registro.html>
+     <form class="form-auth" ng-submit="registrar()">
+        <h2>Registro</h2>
+        <p class="text-warning">{{mensaje_error}}</p>
+        <input type="username" ng-model="usuario.nombreusuario" placeholder="Nombre de Usuario" class="form-control"><br>
+        <input type="password" ng-model="usuario.contrasinal" placeholder="Contraseña" class="form-control"><br>
+        <input type="submit" value="Registrarse" class="btn btn-primary" />
+     </form>
+ 
